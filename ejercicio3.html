@@ -7,16 +7,19 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <header>
+    <div class="cabecera">
+        <a href="index.html">
+          <button class="volver">Volver</button>
+        </a>
         <h1>Regístrate</h1>
-    </header>
-    <form action="" method="post">
+      </div>
+    <form action="http://localhost/ejercicios-formularios-php/ejercicio3.php" method="post" id="formulario-registro">
         
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" required>
     
-        <label for="nombre">Apellidos:</label>
-        <input type="text" name="nombre" required>
+        <label for="lopez">Apellidos:</label>
+        <input type="text" name="lopez" required>
     
         <label for="correo">Correo:</label>
         <input type="email" name="correo" required>
@@ -27,10 +30,27 @@
         <label for="usuario">Nombre de usuario:</label>
         <input type="text" name="usuario" required>
 
-        <label for="usuario">Contraseña:</label>
+        <label for="contraseña">Contraseña:</label>
         <input type="password" name="contraseña" required pattern=".{8,}">
 
-        <button type="submit">Enviar</button>
+        <label for="contraseña_repetir">Repite la contraseña:</label>
+        <input type="password" name="contraseña_repetir" required>
+
+        <button id="enviar" type="submit">Enviar</button>
     </form>
+
+    <script>
+        let formulario = document.getElementById("formulario-registro");
+        formulario.onsubmit = function(event){
+            let contraseña = document.getElementsByName("contraseña")[0].value;
+            let contraseñaRepetir = document.getElementsByName("contraseña_repetir")[0].value;
+            console.log(contraseña, contraseñaRepetir);
+            if( contraseña != contraseñaRepetir ){
+                alert("Las contraseñas no coinciden");
+                event.preventDefault();
+            }
+        }
+    </script>
+
 </body>
 </html>

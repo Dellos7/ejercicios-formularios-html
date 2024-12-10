@@ -37,7 +37,7 @@ input, label{
     width: 100%;
     margin-bottom: 5px;
 }
-button[type="submit"]{
+button{
     padding: 10px;
     font-size: 1.8rem;
     cursor: pointer;
@@ -46,22 +46,40 @@ button[type="submit"]{
     border: none;
     border-radius: 5px;
     padding: 15px 30px;
+}
+
+button[type="submit"]{
     margin-top: 10px;
 }
 
+div.cabecera{
+    text-align: center;
+    border-bottom: 2px solid gray;
+    margin-bottom: 50px;
+}
+
+button.volver{
+    display: inline-block;
+    background-color: #ffc107;
+    padding: 5px 20px;
+    color: black;
+    font-weight: bold;
+}
+
 @media only screen and (min-width: 768px) {
-    /*form {
-        width: 400px;
-        align-items: start;
-        margin: 0;
-    }
-    label{
-        text-align: left;
-    }
-    h1{
-        text-align: left;
-    }*/
     form{
-        width: 50%;
+        width: 40%;
+    }
+
+    div.cabecera{
+        position: relative;
+    }
+
+    button.volver{
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
     }
 }
