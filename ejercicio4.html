@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="cabecera">
+        <a href="index.html">
+          <button class="volver">Volver</button>
+        </a>
+        <h1>Login</h1>
+    </div>
+    <form action="http://localhost/ejercicios-formularios-php/ejercicio4.php" method="post" id="formulario-registro">
+    <!-- MAC -->
+    <!-- <form action="http://localhost:8888/ejercicios-formularios-php/ejercicio3.php" method="post" id="formulario-registro">    -->
+            <label for="usuario">Nombre de usuario:</label>
+            <input type="text" name="usuario" required>
+    
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" name="contraseña" required pattern=".{8,}">
+    
+            <button id="enviar" type="submit">Login</button>
+        </form>
+</body>
+</html>
