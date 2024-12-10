@@ -13,8 +13,8 @@
         </a>
         <h1>Regístrate</h1>
       </div>
-    <form action="http://localhost/ejercicios-formularios-php/ejercicio3.php" method="post" id="formulario-registro">
-        
+
+    <form action="http://localhost/ejercicios-formularios-php/ejercicio3.php" method="post" id="formulario-registro">   
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" required>
     
@@ -29,6 +29,15 @@
 
         <label for="usuario">Nombre de usuario:</label>
         <input type="text" name="usuario" required>
+
+        <label for="rol">Rol:</label>
+        <select name="rol" required>
+            <option value="profesor">Profesor</option>
+            <option value="alumno">Alumno</option>
+        </select>
+
+        <label for="color_favorito">Color favorito:</label>
+        <input type="color" name="color_favorito" required>
 
         <label for="contraseña">Contraseña:</label>
         <input type="password" name="contraseña" required pattern=".{8,}">
